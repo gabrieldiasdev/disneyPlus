@@ -1,0 +1,67 @@
+.newMovie {
+	display: flex;
+	align-items: stretch;
+	column-gap: 24px;
+
+	width: 100%;
+	height: 48px;
+
+	margin-top: 28px;
+}
+
+.newMovie input {
+	flex: 1;
+
+	border: 0;
+	border-radius: 6px;
+
+	outline: none;
+
+	height: 100%;
+
+	padding: 0 16px;
+
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+}
+
+.newMovie input::placeholder {
+	color: var(--primary);
+}
+
+.newMovie button {
+	width: 48px;
+
+	border: 0;
+	border-radius: 6px;
+
+	background: var(--linear);
+
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+@media (max-width: 650px) {
+	.newMovie {
+		flex-direction: column;
+		gap: 16px 0;
+		height: auto;
+	}
+
+	.newMovie input {
+		padding: 10px 12px;
+	}
+
+	.newMovie button {
+		height: 40px;
+		width: 100%;
+
+		font-size: 1rem;
+	}
+
+	.newMovie button::before {
+		content: 'Adicionar';
+	}
+}

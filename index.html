@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Disney Plus</title>
+		<meta name="description" content="Plataforma do disney plus" />
+
+		<!-- FAVICON -->
+		<link
+			rel="shortcut icon"
+			type="image/jpg"
+			href="./assets/img/favicon.ico"
+		/>
+
+		<!-- GOOGLE FONTS -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<!-- *currently set to "Roboto". Feel free to change it to whatever you like* -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS STYLE LINK -->
+		<link rel="stylesheet" href="./assets/css/reset.css" />
+	</head>
+	<body>
+		<div id="app">
+			<div class="app_image">
+				<img
+					src="https://image.tmdb.org/t/p/original/3G1Q5xF40HkUBJXxt2DQgQzKTp5.jpg"
+					alt="Imagem filme destaque"
+				/>
+			</div>
+
+			<header>
+				<img
+					loading="lazy"
+					src="./assets/img/logo.png"
+					alt="Logo da Disney Plus"
+				/>
+
+				<button
+					type="button"
+					class="button_menu"
+					aria-label="Abrir menu lateral"
+					onclick="changeButtonMenu();"
+				>
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+
+				<nav class="navigation">
+					<h2>Movies</h2>
+
+					<form class="newMovie" id="add_movie">
+						<input
+							type="text"
+							placeholder="Adicione um filme"
+							name="movie"
+						/>
+						<button type="submit">+</button>
+					</form>
+
+					<ul id="movies">
+						<!-- Movies Card  -->
+					</ul>
+				</nav>
+			</header>
+
+			<main>
+				<section class="feature_movie">
+					<div class="rating">
+						<img
+							src="./assets/img/logo-imdb.png"
+							alt="Logo da IMDB"
+						/>
+						<strong>
+							<!-- Movie Rating -->
+						</strong>
+					</div>
+
+					<span>
+						<!-- Movie Informations -->
+					</span>
+
+					<h1>
+						<!-- Movie Title -->
+					</h1>
+
+					<p>
+						<!-- Movie Description -->
+					</p>
+
+					<button type="button">
+						<img
+							src="./assets/img/icon-play.png"
+							alt="Icone de play"
+						/>
+						Assistir agora
+					</button>
+				</section>
+			</main>
+		</div>
+
+		<script src="./assets/js/script.js"></script>
+	</body>
+</html>

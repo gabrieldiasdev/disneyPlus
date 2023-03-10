@@ -1,0 +1,67 @@
+#app {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+
+	width: 100%;
+	height: 100vh;
+
+	position: relative;
+
+	overflow: hidden;
+
+	padding: 45px 60px 0px;
+}
+
+main {
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+.app_image {
+	position: absolute;
+	inset: 0;
+
+	z-index: -1;
+}
+
+.app_image::after {
+	content: '';
+
+	position: absolute;
+	inset: 0;
+
+	background: linear-gradient(
+		90.18deg,
+		rgba(13, 22, 46, 0.7) 23.21%,
+		rgba(13, 22, 46, 0.0001) 96.69%
+	);
+}
+
+.app_image img {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+}
+
+@media screen and (max-width: 1079px) {
+	#app {
+		padding: 40px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	#app {
+		padding: 24px;
+	}
+
+	.app_image::after {
+		background: linear-gradient(
+			90.18deg,
+			rgba(13, 22, 46, 0.7) 30%,
+			rgba(13, 22, 46, 0.2) 96.69%
+		);
+	}
+}
